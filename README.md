@@ -1,0 +1,5 @@
+![method tambahkan data alamat berupa tipe, alamat, kota](https://github.com/chirax201/PEMWEB_2.1/assets/145244774/d3f1af1e-765f-4dd8-83ee-878acce5eb4b)
+![Panggil tampilkan data tersebut dengan menggunakan fungsi foreach pada halaman contact](https://github.com/chirax201/PEMWEB_2.1/assets/145244774/aa43cfe3-917d-4814-83ca-68899285fef7)
+![page baru dengan nama contact kemudian akses page contact lewat menu 1](https://github.com/chirax201/PEMWEB_2.1/assets/145244774/64eaacb1-2cef-4ab8-a13a-34b81656a5e8)
+![page baru dengan nama contact kemudian akses page contact lewat menu](https://github.com/chirax201/PEMWEB_2.1/assets/145244774/c57767e7-fc8e-473c-adb1-2230a2aaf10c)
+![hasil commit](https://github.com/chirax201/PEMWEB_2.1/assets/145244774/f943f63a-d72b-4e31-a0c0-874d71e102e1)
