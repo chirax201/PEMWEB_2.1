@@ -1,15 +1,12 @@
+<?= $this->extend('layout/template'); ?>
+
+<?= $this->section('content'); ?>
 <div class="container">
-    <div class="row">
+    <div class="rows">
         <div class="col">
-            <h1>Tentang kami</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima reiciendis voluptate sequi fugiat.
-                Veritatis tempore, aut iusto quae iste perspiciatis sit error doloribus recusandae, quibusdam provident,
-                necessitatibus suscipit. Unde, velit.</p>
-
-            <?php
-            d($tes);
-            ?>
-
+            <h1>Halaman About</h1>
         </div>
     </div>
 </div>
+<?= $this->endSection(); ?>
+    
