@@ -2,13 +2,13 @@
 
 namespace App\Controllers;
 
-class Pages extends BaseController
+class Page extends BaseController
 {
     public function index()
     {
         $data = [
             'title' => 'Home | Unipdu Press',
-            'tes' => ['satu', 'dua', 'tiga']
+            //'tes' => ['satu', 'dua', 'tiga']
         ];
         return view('page/home', $data);
     }
@@ -16,7 +16,8 @@ class Pages extends BaseController
     public function about()
     {
         $data = [
-            'title' => 'Home | Unipdu Press',
+            'title' => 'About | Unipdu Press',
+            //'tes' => ['satu', 'dua', 'tiga']
         ];
         return view('page/about', $data);
     }
