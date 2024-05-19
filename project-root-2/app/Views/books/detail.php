@@ -13,13 +13,13 @@
                     <div class="col-md-8">
                         <div class="card-body">
                             <h5 class="card-title"><?= $buku['judul']; ?></h5>
-                            <p class="card-text"><b>Penulis : </b><?= $buku['penulis']; ?></p>
-                            <p class="card-text"><small class="text-body-secondary"><b>Penerbit : </b><?= $buku['penerbit']; ?></small></p>
+                            <p class="card-text"><b>Penulis : </b> <?= $buku['penulis']; ?></p>
+                            <p class="card-text"><small class="text-body-secondary"><b>Penerbit : </b> <?= $buku['penerbit']; ?></small></p>
 
-                            <a href="#" class="btn btn-warning">Ubah</a>
-                            <a href="#" class="btn btn-danger">Hapus</a>
-                            <br><br>
-                            <a href="/books" class="btn btn-secondary">Kembali ke daftar buku</a>
+                            <a href="" class="btn btn-warning">Ubah</a>
+                            <a href="" class="btn btn-danger">Hapus</a>
+                            <br></br>
+                            <a href="/books">Kembali ke Daftar Buku</a>
                         </div>
                     </div>
                 </div>
