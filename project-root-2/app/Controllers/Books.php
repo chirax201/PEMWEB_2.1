@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\Models\BookModel;
 use App\Models\BooksModel;
 
 class Books extends BaseController
@@ -22,35 +21,67 @@ class Books extends BaseController
 
         return view('books/index', $data);
     }
+
     public function detail($slug)
     {
-        //$buku = $this->bukuModel->where(['slug' => $slug])->first();
 
-        //$buku = $this->bukuModel->getBuku($slug); pindah ke data
         $data = [
             'title' => 'Detail Buku',
             'buku' => $this->bukuModel->getBuku($slug)
         ];
 
-        //jika buku tidak ada
         if (empty($data['buku'])) {
             throw new \CodeIgniter\Exceptions\PageNotFoundException('Judul Buku' . $slug . 'Tidak ditemukan');
         }
 
         return view('books/detail', $data);
     }
+
     public function create()
     {
-
         $data = [
-            'title' => 'Form Tambah Data Buku'
+            'title' => 'Form Tambah Buku',
+            'validation' => session()->getFlashdata('validation') ?? \Config\Services::validation(),
         ];
-
         return view('books/create', $data);
     }
+
+    public function delete($id)
+    {
+        $this->bukuModel->delete($id);
+        session()->setFlashdata('pesan', 'Data berhasil dihapus');
+        return redirect()->to('/books');
+    }
+
     public function save()
     {
-        //$this->request->getVar('judul');
+        //validasi Input
+        if (
+            !$this->validate([
+                'judul' => [
+                    'rules' => 'required|is_unique[books.judul]',
+                    'errors' => [
+                        'required' => '{field} buku harus diisi',
+                        'is_unique'=> '{field} buku sudah dimasukkan'
+                    ]
+                ],
+                'penulis' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => '{field} buku harus diisi'
+                    ]
+                ],
+                'penerbit' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required' => '{field} buku harus diisi',
+                    ]
+                ]
+            ])
+        ) {
+            session()->setFlashdata('validation', \Config\Services::validation());
+            return redirect()->to('/books/create')->withInput();
+        }
 
         $slug = url_title($this->request->getVar('judul'), '-', true);
         $this->bukuModel->save([
@@ -66,4 +97,6 @@ class Books extends BaseController
 
         return redirect()->to('/books');
     }
+
+
 }
