@@ -33,7 +33,7 @@ abstract class BaseController extends Controller
      * class instantiation. These helpers will be available
      * to all other controllers that extend BaseController.
      *
-     * @var array
+     * @var list<string>
      */
     protected $helpers = [];
 
@@ -56,7 +56,4 @@ abstract class BaseController extends Controller
         // E.g.: $this->session = \Config\Services::session();
         session();
     }
-
 }
-
-
