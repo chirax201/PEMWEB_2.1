@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2024 at 04:36 PM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.0.28
+-- Waktu pembuatan: 06 Bulan Mei 2024 pada 14.30
+-- Versi server: 10.4.32-MariaDB
+-- Versi PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `books`
+-- Struktur dari tabel `books`
 --
 
 CREATE TABLE `books` (
@@ -39,33 +39,33 @@ CREATE TABLE `books` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `books`
+-- Dumping data untuk tabel `books`
 --
 
 INSERT INTO `books` (`id`, `judul`, `slug`, `penulis`, `penerbit`, `sampul`, `created_at`, `updated_at`) VALUES
-(1, 'Love Yourself', 'loveyourself', 'Kim Namjoon of BTS', 'Bighit Ent.', 'loveyourself.jpeg', '2024-04-04 21:06:17', '2024-04-04 21:03:54'),
-(2, 'Skool Luv Affair', 'skoolluvaffair', 'Kim Namjoon of BTS', 'Bighit Ent.', 'skoolluvaffair.jpeg', '2024-04-04 16:18:35', '2024-04-04 16:18:35'),
-(3, 'Dark & Wild', 'dark&wild', 'Kim Namjoon of BTS', 'Bighit Ent.', 'dark&wild.jpeg', '2024-05-08 13:09:17', '2024-05-08 13:09:17');
+(1, 'Abu Nawas', 'abunawas', 'Abu Nawas', 'Gramedia', 'AbuNawas.jpg', '2024-03-26 13:59:59', '2024-03-26 13:59:59'),
+(2, 'Al-Khwarizmi', 'al', 'Corona Brezina', 'Gramedia', 'Al-Khwarizmi.jpg', '2024-03-26 22:31:34', '2024-03-26 22:31:34'),
+(7, 'Awan', 'awan', 'Bulan', 'Bintang', 'Semesta', '2024-05-06 12:22:32', '2024-05-06 12:22:32');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `books`
+-- Indeks untuk tabel `books`
 --
 ALTER TABLE `books`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `books`
+-- AUTO_INCREMENT untuk tabel `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

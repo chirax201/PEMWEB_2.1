@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\BooksModel;
 
 class Page extends BaseController
 {
@@ -8,7 +9,7 @@ class Page extends BaseController
     {
         $data = [
             'title' => 'Home | Unipdu Press',
-            //'tes' => ['satu', 'dua', 'tiga']
+            'tes' => ['satu', 'dua', 'tiga']
         ];
         return view('page/home', $data);
     }
@@ -16,8 +17,8 @@ class Page extends BaseController
     public function about()
     {
         $data = [
-            'title' => 'About | Unipdu Press',
-            //'tes' => ['satu', 'dua', 'tiga']
+            'title' => 'Home | Unipdu Press',
+            'tes' => ['satu', 'dua', 'tiga']
         ];
         return view('page/about', $data);
     }
@@ -27,8 +28,8 @@ class Page extends BaseController
         $data = [
             'title' => 'Contact | Unipdu Press',
             'alamat' => [
-                ['tipe' => 'Rumah', 'alamat' => 'Dsn. Ngemplak Selatan', 'kota' => 'Jombang'],
-                ['tipe' => 'Kantor', 'alamat' => 'Unipdu', 'kota' => 'Jombang']
+                ['tipe' => 'Rumah', 'alamat' => 'Desa Peterongan no 28', 'kota' => 'Jombang'],
+                ['tipe' => 'Kantor', 'alamat' => 'Kompleks Ponpes Darul Ulum Peterongan', 'kota' => 'Jombang']
             ]
         ];
         return view('page/contact', $data);
