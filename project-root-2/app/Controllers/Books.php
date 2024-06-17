@@ -98,21 +98,17 @@ class Books extends BaseController
             return redirect()->to('/books/create')->withInput();
         }
 
+        //ambil file gambar
         $gambarSampul = $this->request->getFile('sampul');
-        //$namaSampul = $gambarSampul->getName();
-        //$namaSampul = $gambarSampul->getRandomName();
-        //$gambarSampul->move('img');
 
         //cek apakah ada file yang diunggah
         if ($gambarSampul->getError() == 4) {
-            $namaSampul = 'default.jpg';
+            $namaSampul = 'no-cover.jpg';
         } else {
-            //generate nama gambar
+            //generate nama random gambar
             $namaSampul = $gambarSampul->getRandomName();
             //pindah file gambar ke folder img
             $gambarSampul->move('img', $namaSampul);
-            //ambil nama file gambar
-            //$namaSampul = $gambarSampul->getName();
         }
 
         $slug = url_title($this->request->getVar('judul'), '-', true);
@@ -121,7 +117,7 @@ class Books extends BaseController
             'slug' => $slug,
             'penulis' => $this->request->getVar('penulis'),
             'penerbit' => $this->request->getVar('penerbit'),
-            'sampul' => $namaSampul
+            'sampul' => $namaSampul //simpan gambar ke db
         ]);
 
         session()->setFlashdata('pesan', 'Data berhasil ditambahkan');
@@ -220,3 +216,4 @@ class Books extends BaseController
 
 
 }
+
