@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Jun 2024 pada 12.51
--- Versi server: 10.4.32-MariaDB
--- Versi PHP: 8.0.30
+-- Generation Time: Jun 20, 2024 at 08:22 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `books`
+-- Table structure for table `books`
 --
 
 CREATE TABLE `books` (
@@ -39,20 +39,18 @@ CREATE TABLE `books` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data untuk tabel `books`
+-- Dumping data for table `books`
 --
 
 INSERT INTO `books` (`id`, `judul`, `slug`, `penulis`, `penerbit`, `sampul`, `created_at`, `updated_at`) VALUES
-(1, 'Abu Nawas', 'abu-nawas', 'Abu Nawas', 'Gramedia', '1717070095_8cc4363fe0064f0df8e6.jpg', '2024-03-26 13:59:59', '2024-05-30 11:54:55'),
-(2, 'Al-Khwarizmi', 'al-khwarizmi', 'Corona Brezina', 'Gramedia', '1717070103_3bc22704dd34921379e3.jpg', '2024-03-26 22:31:34', '2024-05-30 11:55:03'),
-(23, 'awan', 'awan', 'bulan', 'Bintang', 'no-cover.jpg', '2024-05-29 14:28:22', '2024-05-30 12:06:49'),
-(24, 'madilog', 'madilog', 'Tan Malaka', 'Widjaya', '1717070481_e4b042330511205b85c2.jpg', '2024-05-30 11:57:58', '2024-05-30 12:01:21'),
-(25, 'as', 'as', 'sad', 'a', '1717084369_3191bf8926bdfb80d713.jpg', '2024-05-30 15:52:49', '2024-05-30 15:52:49');
+(1, 'NALAR TASAWUF', 'Sebagai Revolusi Pendidikan Islam', 'Istania Widayati Hidaya,M.Pd.I', 'SALMAN', 'buku1.jpg', '2024-03-26 13:59:59', '2024-05-30 11:54:55'),
+(2, 'SYEKH ABDUL QADIR AL-JAILANI', 'syekh-abdul-qadir-al-jailani', 'SALMAN FARIZ', 'CHIRAX', 'buku2.jpg', '2024-03-26 22:31:34', '2024-05-30 11:55:03'),
+(27, 'salman', 'salman', 'salman', 'salman', '1718906701_46e7d5df13d78fda834e.jpg', '2024-06-20 18:05:01', '2024-06-20 18:05:01');
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `migrations`
+-- Table structure for table `migrations`
 --
 
 CREATE TABLE `migrations` (
@@ -66,7 +64,7 @@ CREATE TABLE `migrations` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data untuk tabel `migrations`
+-- Dumping data for table `migrations`
 --
 
 INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`, `batch`) VALUES
@@ -75,7 +73,7 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `penulis`
+-- Table structure for table `penulis`
 --
 
 CREATE TABLE `penulis` (
@@ -89,7 +87,7 @@ CREATE TABLE `penulis` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data untuk tabel `penulis`
+-- Dumping data for table `penulis`
 --
 
 INSERT INTO `penulis` (`id`, `name`, `phone`, `address`, `email`, `created_at`, `updated_at`) VALUES
@@ -204,41 +202,41 @@ INSERT INTO `penulis` (`id`, `name`, `phone`, `address`, `email`, `created_at`, 
 --
 
 --
--- Indeks untuk tabel `books`
+-- Indexes for table `books`
 --
 ALTER TABLE `books`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `migrations`
+-- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `penulis`
+-- Indexes for table `penulis`
 --
 ALTER TABLE `penulis`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `books`
+-- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT untuk tabel `migrations`
+-- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT untuk tabel `penulis`
+-- AUTO_INCREMENT for table `penulis`
 --
 ALTER TABLE `penulis`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=115;
